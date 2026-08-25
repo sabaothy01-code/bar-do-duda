@@ -1,0 +1,8 @@
+BAR DO DUDA — SITE FINAL
+
+1. Extraia o ZIP usando 'Extrair tudo'.
+2. Abra a pasta 'Bar_do_Duda_SITE_FINAL'.
+3. Dê dois cliques em index.html.
+
+As fotos ficam dentro da pasta assets e estão ligadas ao site.
+O Chopp foi removido.
