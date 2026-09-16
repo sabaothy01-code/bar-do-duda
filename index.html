@@ -1,182 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bar do Duda | Boteco Raiz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bar do Duda | Boteco Raiz desde 1996</title>
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f3eadb;
-color:#202020;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-header{
-position:sticky;
-top:0;
-z-index:9;
-background:#0d2613;
-color:#fff;
-padding:14px 4vw;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
+html {
+    scroll-behavior: smooth;
 }
 
-.logo{
-font-size:24px;
-font-weight:bold;
+body {
+    font-family: Arial, sans-serif;
+    background: #17110d;
+    color: #f5e6c8;
+    line-height: 1.6;
 }
 
-.logo small{
-font-size:12px;
-display:block;
+header {
+    background: #0d0907;
+    border-bottom: 2px solid #c99a3d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-nav a{
-color:#fff;
-text-decoration:none;
-font-weight:bold;
+.logo {
+    color: #e0b65a;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-.hero{
-min-height:650px;
-padding:70px 7vw;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-background:linear-gradient(135deg,#0d2613,#7160af);
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.hero-content{
-max-width:900px;
+nav a {
+    color: #f5e6c8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.hero img{
-width:280px;
-height:280px;
-object-fit:cover;
-border-radius:18px;
-margin-top:25px;
+nav a:hover {
+    color: #e0b65a;
 }
 
-.eyebrow{
-font-weight:bold;
-font-size:18px;
+.hero {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        linear-gradient(rgba(15,9,5,.72), rgba(15,9,5,.82)),
+        url("assets/foto_10.jpg") center/cover;
 }
 
-.hero h1{
-font-size:48px;
-margin:10px 0;
+.hero-content {
+    max-width: 850px;
 }
 
-section{
-padding:75px 7vw;
+.hero small {
+    color: #e0b65a;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.dark{
-background:#0d2613;
-color:#fff;
+.hero h1 {
+    font-size: clamp(48px, 8vw, 90px);
+    margin: 10px 0;
+    color: #fff3d2;
 }
 
-.title{
-font-size:38px;
-text-transform:uppercase;
-color:#d3c3ac;
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
 }
 
-.lead{
-font-size:18px;
-line-height:1.6;
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.facts{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
-margin-top:30px;
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    background: #c99a3d;
+    color: #17110d;
 }
 
-.fact{
-background:#eee2cf;
-padding:24px;
-border-right:1px solid #d3c3ac;
-color:#202020;
+.btn:hover {
+    background: #e0b65a;
 }
 
-.cards,.menu,.photos{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-margin-top:30px;
+.btn-outline {
+    background: transparent;
+    border: 1px solid #c99a3d;
+    color: #f5e6c8;
 }
 
-.card,.menu-item{
-background:#fff;
-padding:22px;
-border-radius:12px;
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 20px;
 }
 
-.photos img{
-width:100%;
-height:280px;
-object-fit:cover;
-border-radius:12px;
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 22px;
-background:#d3c3ac;
-color:#0d2613;
-text-decoration:none;
-font-weight:bold;
-border-radius:8px;
+.section-title h2 {
+    color: #e0b65a;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-footer{
-background:#08160b;
-color:#fff;
-text-align:center;
-padding:25px;
+.section-title p {
+    color: #d8c6a6;
 }
 
-@media(max-width:900px){
-nav{width:100%}
-header{flex-wrap:wrap}
-.facts,.cards,.menu,.photos{
-grid-template-columns:1fr 1fr;
-}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-@media(max-width:600px){
-.facts,.cards,.menu,.photos{
-grid-template-columns:1fr;
+.card {
+    background: #241812;
+    border: 1px solid #493426;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
 }
 
-.hero h1{
-font-size:36px;
+.card h3 {
+    color: #e0b65a;
+    margin-bottom: 12px;
+    font-size: 23px;
 }
 
-.hero img{
-width:240px;
-height:240px;
+.card p {
+    color: #e6d8bd;
 }
+
+.history {
+    background: #20150f;
+    max-width: none;
+}
+
+.history-content {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.history-text {
+    font-size: 19px;
+    color: #f0dfc1;
+}
+
+.history-text p {
+    margin-bottom: 18px;
+}
+
+.highlight {
+    color: #e0b65a;
+    font-weight: bold;
+}
+
+.contact {
+    background: #0f0a07;
+    max-width: none;
+}
+
+.contact-content {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contact-box {
+    background: #21150f;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #493426;
+}
+
+.contact-box h3 {
+    color: #e0b65a;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #080604;
+    color: #bba98e;
+}
+
+@media (max-width: 800px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .cards,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
 }
 </style>
 </head>
@@ -184,172 +253,290 @@ height:240px;
 <body>
 
 <header>
-<div class="logo">
-<small>DESDE 1996</small>
-BAR DO DUDA
-</div>
+    <div class="nav">
+        <div class="logo">BAR DO DUDA</div>
 
-<nav>
-<a href="#inicio">INÍCIO</a>
-<a href="#cardapio">CARDÁPIO</a>
-<a href="#historia">NOSSA HISTÓRIA</a>
-<a href="#bar">O BAR</a>
-<a href="#eventos">EVENTOS</a>
-<a href="#galeria">GALERIA</a>
-<a href="#contato">CONTATO</a>
-</nav>
+        <nav>
+            <a href="#inicio">INÍCIO</a>
+            <a href="#historia">NOSSA HISTÓRIA</a>
+            <a href="#cardapio">CARDÁPIO</a>
+            <a href="#bar">O BAR</a>
+            <a href="#galeria">GALERIA</a>
+            <a href="#contato">CONTATO</a>
+        </nav>
+    </div>
 </header>
 
+<main>
+
 <section class="hero" id="inicio">
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="eyebrow">DESDE 1996</div>
+        <small>06 DE DEZEMBRO DE 1996</small>
 
-<h1>Fazendo História</h1>
+        <h1>Bar do Duda</h1>
 
-<p class="lead">
-Um boteco raiz, familiar e cheio de histórias.
-</p>
+        <p>Boteco raiz, família, amizade e muita resenha.</p>
 
-<img src="/assets/foto_10.jpg" alt="Rosi e Duda">
+        <div class="buttons">
+            <a class="btn" href="#cardapio">VER CARDÁPIO</a>
 
-</div>
+            <a class="btn" href="https://wa.me/554137791420" target="_blank">
+                PEDIR PELO WHATSAPP
+            </a>
+
+            <a class="btn btn-outline"
+               href="https://maps.app.goo.gl/rsck9L547ZEDQYLW6"
+               target="_blank">
+                COMO CHEGAR
+            </a>
+        </div>
+
+    </div>
 </section>
 
-<section class="dark">
-<h2 class="title">Nossa História</h2>
+<section id="historia">
+    <div class="section-title">
+        <h2>Nossa História</h2>
+        <p>Uma história feita de trabalho, família e amizade.</p>
+    </div>
 
-<p class="lead">
-Desde 06/12/1996, o Bar do Duda faz parte da história de muitas famílias.
-Um ambiente acolhedor para encontrar amigos, acompanhar jogos,
-comemorar momentos especiais e aproveitar aquele tradicional clima de boteco.
-</p>
+    <div class="history-content">
+        <div class="history-text">
 
-<div class="facts">
+            <p>
+                O <span class="highlight">Bar do Duda</span> nasceu em
+                06 de dezembro de 1996, com muito trabalho, dedicação
+                e o sonho de construir um lugar onde as pessoas
+                pudessem se sentir em casa.
+            </p>
 
-<div class="fact">
-<b>Desde 06/12/1996</b>
-<span>Tradição e qualidade.</span>
-</div>
+            <p>
+                Ao longo desses anos, eu e o Duda construímos muito
+                mais do que um bar. Construímos nossa família, nossa
+                vida e uma história cheia de momentos especiais.
+            </p>
 
-<div class="fact">
-<b>Família</b>
-<span>Um negócio construído com amor.</span>
-</div>
+            <p>
+                Nossos filhos cresceram dentro do bar, acompanhando
+                nossa caminhada e fazendo parte dessa história desde
+                pequenos. E muitos dos nossos clientes também cresceram
+                junto com a gente. Alguns são nossos amigos há mais de
+                30 anos.
+            </p>
 
-<div class="fact">
-<b>Bar Raiz</b>
-<span>Amigos e clientes de longa data.</span>
-</div>
+            <p>
+                Aqui já tivemos dias de muita alegria, dias difíceis,
+                muitas risadas, algumas lágrimas e, acima de tudo,
+                muita união para continuar seguindo em frente.
+            </p>
 
-<div class="fact">
-<b>Futebol</b>
-<span>Jogos e muita resenha.</span>
-</div>
+            <p>
+                O Bar do Duda é um <span class="highlight">boteco raiz,
+                familiar e acolhedor</span>, daqueles lugares onde você
+                chega como cliente e, com o tempo, acaba virando amigo.
+            </p>
 
-</div>
+            <p>
+                Hoje, olhando para tudo que construímos, só podemos
+                agradecer a cada pessoa que passou pela nossa porta
+                e fez parte dessa história.
+            </p>
+
+            <p>
+                Quase 30 anos depois, continuamos aqui — trabalhando
+                juntos, recebendo nossos amigos e escrevendo novos
+                capítulos dessa história.
+            </p>
+
+            <p>
+                <span class="highlight">
+                    BAR DO DUDA — Nossa história é feita de pessoas.
+                    E você também faz parte dela.
+                </span>
+            </p>
+
+        </div>
+    </div>
 </section>
 
 <section id="cardapio">
-<h2 class="title">Nosso Cardápio</h2>
+    <div class="section-title">
+        <h2>Cardápio</h2>
+        <p>Comida de verdade, sabor de casa e aquele jeito de boteco.</p>
+    </div>
 
-<p class="lead">
-Comida de boteco feita com carinho para você aproveitar com a família e os amigos.
-</p>
+    <div class="cards">
 
-<div class="menu">
+        <div class="card">
+            <h3>🍽️ Prato Feito</h3>
+            <p>
+                Arroz, feijão, farofa e batata frita,
+                acompanhados da carne do dia,
+                salada e demais acompanhamentos.
+            </p>
+        </div>
 
-<div class="menu-item">
-<h3>Assados</h3>
-<p>Costela de boi, costela de porco, frango assado e outras opções.</p>
-</div>
+        <div class="card">
+            <h3>🥩 Porções</h3>
+            <p>
+                Fritas com bacon, aipim, frango à passarinho,
+                calabresa, kibe, coração, polenta,
+                isca de peixe e muito mais.
+            </p>
+        </div>
 
-<div class="menu-item">
-<h3>Porções</h3>
-<p>Petiscos e porções para compartilhar.</p>
-</div>
+        <div class="card">
+            <h3>🍔 Lanches</h3>
+            <p>
+                X-Burguer, X-Salada, X-Egg, X-Frango,
+                X-Bacon, X-Tudo, misto quente,
+                buraco quente e outros clássicos.
+            </p>
+        </div>
 
-<div class="menu-item">
-<h3>Prato Feito</h3>
-<p>Almoço de terça a sexta-feira.</p>
-</div>
+    </div>
 
-</div>
+    <div class="buttons" style="margin-top:35px;">
+        <a class="btn" href="https://wa.me/554137791420" target="_blank">
+            FALE COM O BAR DO DUDA
+        </a>
+    </div>
 </section>
 
-<section class="dark" id="bar">
-<h2 class="title">O Bar</h2>
+<section id="bar">
+    <div class="section-title">
+        <h2>O Bar</h2>
+        <p>Um lugar para comer, beber, jogar e encontrar os amigos.</p>
+    </div>
 
-<p class="lead">
-Um ambiente acolhedor para encontrar amigos, acompanhar jogos,
-jogar sinuca e curtir o melhor do tradicional boteco.
-</p>
+    <div class="cards">
 
-<div class="cards">
+        <div class="card">
+            <h3>📺 4 TVs</h3>
+            <p>
+                Futebol e os principais jogos para você
+                acompanhar com a galera.
+            </p>
+        </div>
 
-<div class="card">
-<h3>⚽ Futebol</h3>
-<p>Acompanhe os principais jogos com a gente.</p>
-</div>
+        <div class="card">
+            <h3>🎱 Sinuca</h3>
+            <p>
+                Mesa semi-oficial de sinuca para aquela
+                resenha entre amigos.
+            </p>
+        </div>
 
-<div class="card">
-<h3>🎱 Sinuca</h3>
-<p>Mesa de sinuca para aquela resenha entre amigos.</p>
-</div>
+        <div class="card">
+            <h3>🍺 Boteco Raiz</h3>
+            <p>
+                Cerveja gelada, chopp, comida boa,
+                família e muita amizade.
+            </p>
+        </div>
 
-<div class="card">
-<h3>🍺 Boteco Raiz</h3>
-<p>Cerveja gelada, comida boa e muita amizade.</p>
-</div>
-
-</div>
-</section>
-
-<section class="dark" id="eventos">
-<h2 class="title">Eventos</h2>
-
-<p class="lead">
-Torneios, jogos, aniversários e encontros especiais.
-</p>
+    </div>
 </section>
 
 <section id="galeria">
-<h2 class="title">Galeria</h2>
+    <div class="section-title">
+        <h2>Galeria</h2>
+        <p>Momentos que fazem parte da nossa história.</p>
+    </div>
 
-<p class="lead">
-Momentos reais do Bar do Duda, com as fotos enviadas pela família.
-</p>
+    <div class="cards">
 
-<div class="photos">
+        <div class="card">
+            <h3>📸 Nossa família</h3>
+            <p>Fotos da família e da história do Bar do Duda.</p>
+        </div>
 
-<img src="/assets/foto_07.png" alt="Bar do Duda">
+        <div class="card">
+            <h3>🍻 Momentos</h3>
+            <p>Amigos, eventos, futebol e muita resenha.</p>
+        </div>
 
-<img src="/assets/foto_08.jpeg" alt="Bar do Duda">
+        <div class="card">
+            <h3>🍽️ Sabores</h3>
+            <p>Confira nossas comidas e os clássicos do nosso cardápio.</p>
+        </div>
 
-<img src="/assets/foto_10.jpg" alt="Rosi e Duda">
-
-</div>
+    </div>
 </section>
 
-<section class="dark" id="contato">
+<section class="contact" id="contato">
 
-<h2 class="title">Onde Estamos</h2>
+    <div class="section-title">
+        <h2>Contato</h2>
+        <p>Venha conhecer o Bar do Duda!</p>
+    </div>
 
-<p class="lead">
-📍 Rua Octávio Schiavon, 293<br>
-Capão da Imbuia – Curitiba/PR
-</p>
+    <div class="contact-content">
 
-<a class="btn"
-href="https://www.google.com/maps/search/?api=1&query=Rua%20Oct%C3%A1vio%20Schiavon%2C%20293%2C%20Curitiba%2C%20PR"
-target="_blank">
-📍 Ver no mapa
-</a>
+        <div class="contact-box">
+            <h3>📍 Endereço</h3>
+            <p>
+                Rua Octávio Schiavon, 293<br>
+                Capão da Imbuia<br>
+                Curitiba - PR
+            </p>
+
+            <br>
+
+            <a class="btn"
+               href="https://maps.app.goo.gl/rsck9L547ZEDQYLW6"
+               target="_blank">
+                VER NO GOOGLE MAPS
+            </a>
+        </div>
+
+        <div class="contact-box">
+            <h3>📱 WhatsApp</h3>
+            <p>(41) 3779-1420</p>
+
+            <br>
+
+            <a class="btn"
+               href="https://wa.me/554137791420"
+               target="_blank">
+                CHAMAR NO WHATSAPP
+            </a>
+        </div>
+
+        <div class="contact-box">
+            <h3>🕐 Horário</h3>
+            <p>
+                Almoço: 11:30 às 14:30<br>
+                Funcionamento: 11:00 às 22:00
+            </p>
+        </div>
+
+        <div class="contact-box">
+            <h3>⭐ Avalie o Bar do Duda</h3>
+            <p>
+                Sua avaliação é muito importante para nós!
+            </p>
+
+            <br>
+
+            <a class="btn"
+               href="https://maps.app.goo.gl/rsck9L547ZEDQYLW6"
+               target="_blank">
+                AVALIAR NO GOOGLE
+            </a>
+        </div>
+
+    </div>
 
 </section>
+
+</main>
 
 <footer>
-© 2026 Bar do Duda · Boteco Raiz desde 1996
+    <p>BAR DO DUDA</p>
+    <p>Desde 06 de dezembro de 1996 ❤️</p>
+    <p>Boteco raiz, família e amizade.</p>
 </footer>
 
 </body>
