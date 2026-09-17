@@ -3,237 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Galeria | Bar do Duda</title>
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #17120e;
-  color: #fff;
-}
-
-header {
-  background: #0d0b09;
-  padding: 25px 20px;
-  text-align: center;
-  border-bottom: 2px solid #c99a3d;
-}
-
-header h1 {
-  margin: 0;
-  color: #f2c14e;
-  font-size: 38px;
-}
-
-header p {
-  margin: 8px 0 0;
-  color: #ddd;
-  font-size: 18px;
-}
-
-nav {
-  background: #0d0b09;
-  text-align: center;
-  padding: 15px;
-}
-
-nav a {
-  color: #f2c14e;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.titulo {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.titulo h2 {
-  color: #f2c14e;
-  font-size: 34px;
-  margin-bottom: 10px;
-}
-
-.titulo p {
-  color: #ddd;
-  font-size: 18px;
-}
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.foto {
-  background: #211a15;
-  padding: 8px;
-  border: 2px solid #c99a3d;
-  border-radius: 12px;
-}
-
-.foto img {
-  display: block;
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.voltar {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.voltar a {
-  display: inline-block;
-  background: #c99a3d;
-  color: #17120e;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 14px 25px;
-  border-radius: 8px;
-}
-
-@media (max-width: 700px) {
-
-  .galeria {
-    grid-template-columns: 1fr;
-  }
-
-  .foto img {
-    height: 300px;
-  }
-
-  header h1 {
-    font-size: 30px;
-  }
-}
-</style>
+<meta name="description" content="Fotos do Bar do Duda: o bar, a comida, a família e quase 30 anos de história em Curitiba.">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-
-<h1>BAR DO DUDA</h1>
-
-<p>Desde 1996 • Boteco raiz • Família • Amizade</p>
-
+<header class="site-header">
+  <div class="nav-row">
+    <a class="wordmark" href="index.html">Bar do <span>Duda</span></a>
+    <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.primary-nav').classList.toggle('open')">☰</button>
+    <nav class="primary-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">Nossa história</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="o-bar.html">O bar</a></li>
+        <li><a href="galeria.html" class="active">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<nav>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Galeria</div>
+    <h1>Momentos que fazem parte da nossa história.</h1>
+    <p>Do bar, da comida, da família e dos amigos que passaram por aqui.</p>
+  </div>
+</section>
 
-<a href="index.html">INÍCIO</a>
+<section>
+  <div class="wrap">
+    <div class="gallery-grid">
+      <a href="ativos/foto_01.jpg" target="_blank"><img src="ativos/foto_01.jpg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_02.jpeg" target="_blank"><img src="ativos/foto_02.jpeg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_03.jpeg" target="_blank"><img src="ativos/foto_03.jpeg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_04.jpg" target="_blank"><img src="ativos/foto_04.jpg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_05.jpg" target="_blank"><img src="ativos/foto_05.jpg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_06.jpg" target="_blank"><img src="ativos/foto_06.jpg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_07.png" target="_blank"><img src="ativos/foto_07.png" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_08.jpeg" target="_blank"><img src="ativos/foto_08.jpeg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_09.jpeg" target="_blank"><img src="ativos/foto_09.jpeg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_10.jpg" target="_blank"><img src="ativos/foto_10.jpg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_10_antiga.jpg" target="_blank"><img src="ativos/foto_10_antiga.jpg" alt="Bar do Duda, foto antiga" loading="lazy"></a>
+      <a href="ativos/foto_11.jpeg" target="_blank"><img src="ativos/foto_11.jpeg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_12.jpeg" target="_blank"><img src="ativos/foto_12.jpeg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_13.jpeg" target="_blank"><img src="ativos/foto_13.jpeg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="ativos/foto_14.jpeg" target="_blank"><img src="ativos/foto_14.jpeg" alt="Bar do Duda" loading="lazy"></a>
+      <a href="x_bacon.jpg" target="_blank"><img src="x_bacon.jpg" alt="X-Bacon do Bar do Duda" loading="lazy"></a>
+    </div>
 
-<a href="index.html#historia">NOSSA HISTÓRIA</a>
+    <div class="btn-row">
+      <a class="btn solid" href="contato.html">Vir conhecer o bar</a>
+    </div>
+  </div>
+</section>
 
-<a href="index.html#cardapio">CARDÁPIO</a>
-
-<a href="index.html#bar">O BAR</a>
-
-<a href="index.html#contato">CONTATO</a>
-
-</nav>
-
-<div class="container">
-
-<div class="titulo">
-
-<h2>📸 Nossa Galeria</h2>
-
-<p>Momentos que fazem parte da história do Bar do Duda.</p>
-
-</div>
-
-<div class="galeria">
-
-<div class="foto">
-<img src="ativos/foto_01.jpg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_02.jpeg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_03.jpeg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_04.jpg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_05.jpg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_06.jpg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_07.png" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_08.jpeg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_09.jpeg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_10.jpg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_10_antiga.jpg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_11.jpeg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_12.jpeg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_13.jpeg" alt="Bar do Duda">
-</div>
-
-<div class="foto">
-<img src="ativos/foto_14.jpeg" alt="Bar do Duda">
-</div>
-
-</div>
-
-<div class="voltar">
-
-<a href="index.html">← Voltar ao Bar do Duda</a>
-
-</div>
-
-</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-row">
+      <div>
+        <div class="wordmark">Bar do <span style="color:var(--copper)">Duda</span></div>
+        <p>Rua Octávio Schiavon, 293 — Capão da Imbuia, Curitiba/PR</p>
+      </div>
+      <div class="footer-links">
+        <a href="historia.html">Nossa história</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+        <a href="https://wa.me/554137791420">(41) 3779-1420</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

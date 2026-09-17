@@ -1,0 +1,37 @@
+BAR DO DUDA — SITE EM PÁGINAS SEPARADAS
+=========================================
+
+O QUE MUDOU
+Agora o site tem uma página própria pra cada seção, em vez de uma
+página única com âncoras:
+
+  index.html      -> Início
+  historia.html   -> Nossa História
+  cardapio.html   -> Cardápio (com todos os preços)
+  o-bar.html      -> O Bar
+  galeria.html    -> Galeria de fotos
+  contato.html    -> Contato
+
+Todas as páginas usam o mesmo arquivo style.css e mantêm o mesmo
+visual escuro e moderno com toques de boteco que o site já tinha.
+
+IMPORTANTE SOBRE AS FOTOS
+Estes arquivos continuam apontando para as MESMAS pastas de imagem
+que o site atual já usa: /assets/ e /ativos/. Eu não reenviei as
+fotos — elas já existem no deploy atual do Netlify. Por isso, ao
+publicar, mantenha as pastas assets/ e ativos/ com as mesmas fotos
+que já estão lá (foto_01.jpg até foto_14.jpeg, foto_10_antiga.jpg e
+ativos/x_bacon.jpg).
+
+COMO PUBLICAR NO NETLIFY
+1. Entre em app.netlify.com e abra o site "bar-do-duda".
+2. Vá em "Deploys".
+3. Arraste esta pasta inteira (bar-do-duda-site) pra área de deploy
+   manual — OU, se preferir, copie estes arquivos por cima dos
+   arquivos atuais do site (substituindo o antigo index.html e
+   mantendo as pastas assets/ e ativos/ como estão).
+4. O Netlify gera um novo deploy automaticamente. O domínio
+   bardodudacuritiba.com.br já está conectado, então a mudança
+   aparece direto no domínio próprio.
+
+Se preferir, me diga e eu te guio passo a passo por esse envio.

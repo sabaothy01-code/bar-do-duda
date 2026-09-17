@@ -3,550 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Bar do Duda | Boteco Raiz desde 1996</title>
-
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #17110d;
-    color: #f5e6c8;
-    line-height: 1.6;
-}
-
-header {
-    background: #0d0907;
-    border-bottom: 2px solid #c99a3d;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    color: #e0b65a;
-    font-size: 25px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-nav {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav a {
-    color: #f5e6c8;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #e0b65a;
-}
-
-.hero {
-    min-height: 78vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 70px 20px;
-    background:
-        linear-gradient(rgba(15,9,5,.72), rgba(15,9,5,.82)),
-        url("assets/foto_10.jpg") center/cover;
-}
-
-.hero-content {
-    max-width: 850px;
-}
-
-.hero small {
-    color: #e0b65a;
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.hero h1 {
-    font-size: clamp(48px, 8vw, 90px);
-    margin: 10px 0;
-    color: #fff3d2;
-}
-
-.hero p {
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 13px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    background: #c99a3d;
-    color: #17110d;
-}
-
-.btn:hover {
-    background: #e0b65a;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid #c99a3d;
-    color: #f5e6c8;
-}
-
-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 75px 20px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-title h2 {
-    color: #e0b65a;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.section-title p {
-    color: #d8c6a6;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.card {
-    background: #241812;
-    border: 1px solid #493426;
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-}
-
-.card h3 {
-    color: #e0b65a;
-    margin-bottom: 12px;
-    font-size: 23px;
-}
-
-.card p {
-    color: #e6d8bd;
-}
-
-.history {
-    background: #20150f;
-    max-width: none;
-}
-
-.history-content {
-    max-width: 1050px;
-    margin: auto;
-}
-
-.history-text {
-    font-size: 19px;
-    color: #f0dfc1;
-}
-
-.history-text p {
-    margin-bottom: 18px;
-}
-
-.highlight {
-    color: #e0b65a;
-    font-weight: bold;
-}
-
-.contact {
-    background: #0f0a07;
-    max-width: none;
-}
-
-.contact-content {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.contact-box {
-    background: #21150f;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #493426;
-}
-
-.contact-box h3 {
-    color: #e0b65a;
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    background: #080604;
-    color: #bba98e;
-}
-
-@media (max-width: 800px) {
-    .nav {
-        flex-direction: column;
-    }
-
-    .cards,
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        gap: 12px;
-    }
-
-    .hero {
-        min-height: 70vh;
-    }
-}
-</style>
+<meta name="description" content="Bar do Duda, boteco raiz em Curitiba desde 1996. Comida de boteco, porções, lanches, sinuca e futebol no Capão da Imbuia.">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="nav">
-        <div class="logo">BAR DO DUDA</div>
-
-        <nav>
-            <a href="#inicio">INÍCIO</a>
-            <a href="#historia">NOSSA HISTÓRIA</a>
-            <a href="#cardapio">CARDÁPIO</a>
-            <a href="#bar">O BAR</a>
-            <a href="#galeria">GALERIA</a>
-            <a href="#contato">CONTATO</a>
-        </nav>
-    </div>
+<header class="site-header">
+  <div class="nav-row">
+    <a class="wordmark" href="index.html">Bar do <span>Duda</span></a>
+    <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.primary-nav').classList.toggle('open')">☰</button>
+    <nav class="primary-nav">
+      <ul>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="historia.html">Nossa história</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="o-bar.html">O bar</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<main>
-
-<section class="hero" id="inicio">
-    <div class="hero-content">
-
-        <small>06 DE DEZEMBRO DE 1996</small>
-
-        <h1>Bar do Duda</h1>
-
-        <p>Boteco raiz, família, amizade e muita resenha.</p>
-
-        <div class="buttons">
-            <a class="btn" href="#cardapio">VER CARDÁPIO</a>
-
-            <a class="btn" href="https://wa.me/554137791420" target="_blank">
-                PEDIR PELO WHATSAPP
-            </a>
-
-            <a class="btn btn-outline"
-               href="https://maps.app.goo.gl/rsck9L547ZEDQYLW6"
-               target="_blank">
-                COMO CHEGAR
-            </a>
-        </div>
-
+<section class="home-hero">
+  <div class="wrap">
+    <div class="eyebrow">Desde 06 de dezembro de 1996</div>
+    <h1>Boteco raiz, família e muita resenha.</h1>
+    <p class="lede">No Capão da Imbuia, o Bar do Duda é comida de verdade, cerveja gelada e aquele jeito de casa que só quase 30 anos de história constroem.</p>
+    <div class="btn-row">
+      <a class="btn solid" href="cardapio.html">Ver cardápio</a>
+      <a class="btn" href="https://wa.me/554137791420">Pedir pelo WhatsApp</a>
     </div>
+  </div>
 </section>
 
-<section id="historia">
-    <div class="section-title">
-        <h2>Nossa História</h2>
-        <p>Uma história feita de trabalho, família e amizade.</p>
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Explore o bar</h2>
+      <p>Conheça nossa história, o cardápio e o espaço antes de vir tomar aquele chopp.</p>
     </div>
-
-    <div class="history-content">
-        <div class="history-text">
-
-            <p>
-                O <span class="highlight">Bar do Duda</span> nasceu em
-                06 de dezembro de 1996, com muito trabalho, dedicação
-                e o sonho de construir um lugar onde as pessoas
-                pudessem se sentir em casa.
-            </p>
-
-            <p>
-                Ao longo desses anos, eu e o Duda construímos muito
-                mais do que um bar. Construímos nossa família, nossa
-                vida e uma história cheia de momentos especiais.
-            </p>
-
-            <p>
-                Nossos filhos cresceram dentro do bar, acompanhando
-                nossa caminhada e fazendo parte dessa história desde
-                pequenos. E muitos dos nossos clientes também cresceram
-                junto com a gente. Alguns são nossos amigos há mais de
-                30 anos.
-            </p>
-
-            <p>
-                Aqui já tivemos dias de muita alegria, dias difíceis,
-                muitas risadas, algumas lágrimas e, acima de tudo,
-                muita união para continuar seguindo em frente.
-            </p>
-
-            <p>
-                O Bar do Duda é um <span class="highlight">boteco raiz,
-                familiar e acolhedor</span>, daqueles lugares onde você
-                chega como cliente e, com o tempo, acaba virando amigo.
-            </p>
-
-            <p>
-                Hoje, olhando para tudo que construímos, só podemos
-                agradecer a cada pessoa que passou pela nossa porta
-                e fez parte dessa história.
-            </p>
-
-            <p>
-                Quase 30 anos depois, continuamos aqui — trabalhando
-                juntos, recebendo nossos amigos e escrevendo novos
-                capítulos dessa história.
-            </p>
-
-            <p>
-                <span class="highlight">
-                    BAR DO DUDA — Nossa história é feita de pessoas.
-                    E você também faz parte dela.
-                </span>
-            </p>
-
-        </div>
+    <div class="tile-grid">
+      <a class="tile" href="historia.html">
+        <span class="num">01</span>
+        <h3>Nossa história</h3>
+        <p>De uma banquinha em 1996 ao boteco que virou ponto de encontro de família e amigos.</p>
+        <span class="go">Ler a história →</span>
+      </a>
+      <a class="tile" href="cardapio.html">
+        <span class="num">02</span>
+        <h3>Cardápio</h3>
+        <p>Prato feito, porções pra dividir e lanches clássicos de boteco.</p>
+        <span class="go">Ver o cardápio →</span>
+      </a>
+      <a class="tile" href="o-bar.html">
+        <span class="num">03</span>
+        <h3>O bar</h3>
+        <p>Quatro TVs pros jogos, sinuca e aquele clima raiz de sempre.</p>
+        <span class="go">Conhecer o espaço →</span>
+      </a>
+      <a class="tile" href="galeria.html">
+        <span class="num">04</span>
+        <h3>Galeria</h3>
+        <p>Fotos do bar, da comida, da família e de quase 30 anos de resenha.</p>
+        <span class="go">Ver fotos →</span>
+      </a>
+      <a class="tile" href="contato.html">
+        <span class="num">05</span>
+        <h3>Contato</h3>
+        <p>Endereço, horário de funcionamento e como chegar no Capão da Imbuia.</p>
+        <span class="go">Como chegar →</span>
+      </a>
+      <a class="tile" href="https://wa.me/554137791420">
+        <span class="num">06</span>
+        <h3>Peça já</h3>
+        <p>Chama no WhatsApp pra fazer seu pedido ou reservar sua mesa.</p>
+        <span class="go">Chamar no WhatsApp →</span>
+      </a>
     </div>
+  </div>
 </section>
 
-<section id="cardapio">
-    <div class="section-title">
-        <h2>Cardápio</h2>
-        <p>Comida de verdade, sabor de casa e aquele jeito de boteco.</p>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-row">
+      <div>
+        <div class="wordmark">Bar do <span style="color:var(--copper)">Duda</span></div>
+        <p>Rua Octávio Schiavon, 293 — Capão da Imbuia, Curitiba/PR</p>
+      </div>
+      <div class="footer-links">
+        <a href="historia.html">Nossa história</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+        <a href="https://wa.me/554137791420">(41) 3779-1420</a>
+      </div>
     </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>🍽️ Prato Feito</h3>
-            <p>
-                Arroz, feijão, farofa e batata frita,
-                acompanhados da carne do dia,
-                salada e demais acompanhamentos.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🥩 Porções</h3>
-            <p>
-                Fritas com bacon, aipim, frango à passarinho,
-                calabresa, kibe, coração, polenta,
-                isca de peixe e muito mais.
-            </p>
-        </div>
-
-      
-           <div class="card">
-  <h3>🍔 Lanches</h3>
-  <img src="ativos/x_bacon.jpg" alt="Lanches do Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
-  <p>
-    X-Burguer, X-Salada, X-Egg, X-Frango,
-    X-Bacon, X-Tudo, misto quente,
-    buraco quente e outros clássicos.
-  </p>
-</div>
-
-<section id="bar">
-    <div class="section-title">
-        <h2>O Bar</h2>
-        <p>Um lugar para comer, beber, jogar e encontrar os amigos.</p>
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>📺 4 TVs</h3>
-            <p>
-                Futebol e os principais jogos para você
-                acompanhar com a galera.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🎱 Sinuca</h3>
-            <p>
-                Mesa semi-oficial de sinuca para aquela
-                resenha entre amigos.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🍺 Boteco Raiz</h3>
-            <p>
-                Cerveja gelada, chopp, comida boa,
-                família e muita amizade.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<section id="galeria">
-    <div class="section-title">
-        <h2>Galeria</h2>
-        <p>Momentos que fazem parte da nossa história.</p>
-    </div>
-
-<div style="width:100%;display:grid;grid-template-columns:repeat(2,300px);gap:20px;">
-    <div style="width:100%;display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
-
-<img src="assets/foto_01.jpg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_02.jpeg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_03.jpeg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_04.jpg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-<img src="assets/foto_05.jpg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_06.jpg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_07.png" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_08.jpeg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_09.jpeg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_10.jpg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_10_antiga.jpg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_11.jpeg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_12.jpeg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_13.jpeg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-
-<img src="assets/foto_14.jpeg" alt="Bar do Duda" style="width:100%;height:220px;object-fit:cover;border-radius:10px;border:2px solid #c99a3d;">
-</div>
-    </div>
-     
-    </div>
-</section>
-
-<section class="contact" id="contato">
-
-    <div class="section-title">
-        <h2>Contato</h2>
-        <p>Venha conhecer o Bar do Duda!</p>
-    </div>
-
-    <div class="contact-content">
-
-        <div class="contact-box">
-            <h3>📍 Endereço</h3>
-            <p>
-                Rua Octávio Schiavon, 293<br>
-                Capão da Imbuia<br>
-                Curitiba - PR
-            </p>
-
-            <br>
-
-            <a class="btn"
-               href="https://maps.app.goo.gl/rsck9L547ZEDQYLW6"
-               target="_blank">
-                VER NO GOOGLE MAPS
-            </a>
-        </div>
-
-        <div class="contact-box">
-            <h3>📱 WhatsApp</h3>
-            <p>(41) 3779-1420</p>
-
-            <br>
-
-            <a class="btn"
-               href="https://wa.me/554137791420"
-               target="_blank">
-                CHAMAR NO WHATSAPP
-            </a>
-        </div>
-
-        <div class="contact-box">
-            <h3>🕐 Horário</h3>
-            <p>
-                Almoço: 11:30 às 14:30<br>
-                Funcionamento: 11:00 às 22:00
-            </p>
-        </div>
-
-        <div class="contact-box">
-            <h3>⭐ Avalie o Bar do Duda</h3>
-            <p>
-                Sua avaliação é muito importante para nós!
-            </p>
-
-            <br>
-
-            <a class="btn"
-               href="https://maps.app.goo.gl/rsck9L547ZEDQYLW6"
-               target="_blank">
-                AVALIAR NO GOOGLE
-            </a>
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-<footer>
-    <p>BAR DO DUDA</p>
-    <p>Desde 06 de dezembro de 1996 ❤️</p>
-    <p>Boteco raiz, família e amizade.</p>
+  </div>
 </footer>
 
 </body>
