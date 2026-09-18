@@ -253,7 +253,21 @@ section + section { border-top: 1px solid var(--line); }
 .plate-feature h3 { color: var(--copper-soft); font-size: 1.3rem; margin-bottom: 10px; }
 .plate-feature p { color: var(--ink-muted); margin: 0; }
 
-/* Timeline (história) */
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.dish-grid img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 700px) {
+  .dish-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 .timeline { border-left: 1px solid var(--line); margin-left: 6px; }
 
 .timeline-item {
@@ -293,7 +307,25 @@ section + section { border-top: 1px solid var(--line); }
   margin: 48px 0;
 }
 
-/* Info grid (O Bar / Contato) */
+.story-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 44px 0;
+}
+
+.story-photos figure { margin: 0; }
+.story-photos img { width: 100%; border: 1px solid var(--line); }
+.story-photos figcaption {
+  color: var(--ink-muted);
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  .story-photos { grid-template-columns: 1fr; }
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -323,7 +355,7 @@ section + section { border-top: 1px solid var(--line); }
 .map-frame {
   border: 1px solid var(--line);
   aspect-ratio: 4/3;
-  background: var(--bg-card) url('assets/foto_02.jpeg') center/cover;
+  background: var(--bg-card) url('https://www.bardodudacuritiba.com.br/assets/foto_02.jpeg') center/cover;
 }
 
 /* Home hero */
@@ -332,7 +364,8 @@ section + section { border-top: 1px solid var(--line); }
   min-height: 74vh;
   display: flex;
   align-items: flex-end;
-  background: linear-gradient(180deg, rgba(23,18,15,0.35) 0%, rgba(23,18,15,0.95) 92%), url('assets/foto_04.jpg') center/cover;
+  background: linear-gradient(180deg, rgba(23,18,15,0.35) 0%, rgba(23,18,15,0.95) 92%), url('assets/capa-duda.jpg') center/cover;
+  background-position: center 25%;
   border-bottom: 1px solid var(--line);
 }
 
@@ -366,6 +399,7 @@ footer.site-footer {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .info-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .dish-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 700px) {

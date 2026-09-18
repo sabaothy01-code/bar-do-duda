@@ -16,12 +16,19 @@ Todas as páginas usam o mesmo arquivo style.css e mantêm o mesmo
 visual escuro e moderno com toques de boteco que o site já tinha.
 
 IMPORTANTE SOBRE AS FOTOS
-Estes arquivos continuam apontando para as MESMAS pastas de imagem
-que o site atual já usa: /assets/ e /ativos/. Eu não reenviei as
-fotos — elas já existem no deploy atual do Netlify. Por isso, ao
-publicar, mantenha as pastas assets/ e ativos/ com as mesmas fotos
-que já estão lá (foto_01.jpg até foto_14.jpeg, foto_10_antiga.jpg e
+A maioria dos arquivos aponta para as MESMAS pastas de imagem que o
+site atual já usa: /assets/ e /ativos/. Eu não reenviei essas fotos
+— elas já existem no deploy atual do Netlify. Por isso, ao publicar,
+mantenha as pastas assets/ e ativos/ com as mesmas fotos que já
+estão lá (foto_01.jpg até foto_14.jpeg, foto_10_antiga.jpg e
 ativos/x_bacon.jpg).
+
+FOTO DE CAPA NOVA
+A foto de capa da página inicial agora é uma foto nova, incluída
+aqui dentro da pasta assets/ deste zip: assets/capa-duda.jpg. Essa
+foto AINDA NÃO existe no seu site — então, ao publicar, envie
+também esse arquivo (assets/capa-duda.jpg) junto com o resto,
+além de manter as fotos antigas que já estavam lá.
 
 COMO PUBLICAR NO NETLIFY
 1. Entre em app.netlify.com e abra o site "bar-do-duda".
