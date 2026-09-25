@@ -1,116 +1,415 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cardápio | Bar do Duda</title>
-<meta name="description" content="Cardápio do Bar do Duda: prato feito, porções e lanches de boteco em Curitiba.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap');
 
-<header class="site-header">
-  <div class="nav-row">
-    <a class="wordmark" href="index.html">Bar do <span>Duda</span></a>
-    <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.primary-nav').classList.toggle('open')">☰</button>
-    <nav class="primary-nav">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="historia.html">Nossa história</a></li>
-        <li><a href="cardapio.html" class="active">Cardápio</a></li>
-        <li><a href="o-bar.html">O bar</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+:root {
+  --bg: #17120f;
+  --bg-soft: #1e1712;
+  --bg-card: #241b15;
+  --ink: #f3e9da;
+  --ink-muted: #b7a695;
+  --copper: #c98a34;
+  --copper-soft: #e0ab5f;
+  --brick: #8a3423;
+  --line: rgba(243, 233, 218, 0.14);
+}
 
-<section class="page-hero">
-  <div class="wrap">
-    <div class="eyebrow">Cardápio</div>
-    <h1>Comida de verdade, sabor de casa.</h1>
-    <p>Prato feito, porções pra dividir com os amigos e lanches clássicos de boteco.</p>
-  </div>
-</section>
+* { box-sizing: border-box; }
 
-<section>
-  <div class="wrap">
+html { scroll-behavior: smooth; }
 
-    <div class="plate-feature">
-      <h3>Prato feito</h3>
-      <p>Arroz, feijão, farofa e batata frita, acompanhados da carne do dia, salada e demais acompanhamentos.</p>
-      <div class="plate-photos">
-        <img src="assets/prato_feito_01.jpg" alt="Prato feito do Bar do Duda com arroz, feijão, farofa, carne moída, frango, macarrão, batata frita e salada" loading="lazy">
-        <img src="assets/prato_feito_02.jpg" alt="Prato feito do Bar do Duda com arroz, feijão preto, farofa, frango ao molho, legumes e batata frita" loading="lazy">
-      </div>
-    </div>
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-    <div class="menu-block">
-      <h3>Porções</h3>
-      <p class="menu-note">500g, exceto onde indicado</p>
-      <div class="dish-grid">
-        <img src="assets/aipim_com_bacon.jpg" alt="Aipim com bacon, R$ 38,90, 500g" loading="lazy">
-        <img src="assets/alcatra.jpg" alt="Alcatra, R$ 50,90, 500g" loading="lazy">
-        <img src="assets/almondegas.jpg" alt="Almôndegas, R$ 38,90, 500g" loading="lazy">
-        <img src="assets/aneis_de_cebolas.jpg" alt="Anéis de cebola, R$ 29,90, 500g" loading="lazy">
-        <img src="assets/bucho_a_milanesa.jpg" alt="Bucho à milanesa, R$ 50,90, 500g" loading="lazy">
-        <img src="assets/calabresa.jpg" alt="Calabresa, R$ 39,90, 500g" loading="lazy">
-        <img src="assets/coracao.jpg" alt="Coração, R$ 40,90, 500g" loading="lazy">
-        <img src="assets/figado.jpg" alt="Fígado, R$ 39,90, 500g" loading="lazy">
-        <img src="assets/frango_a_passarinho.jpg" alt="Frango à passarinho, R$ 43,90, 500g" loading="lazy">
-        <img src="assets/fritas_com_bacon.jpg" alt="Fritas com bacon, R$ 39,90, 500g" loading="lazy">
-        <img src="assets/isca_de_peixe.jpg" alt="Isca de peixe, R$ 50,90, 500g" loading="lazy">
-        <img src="assets/kibe.jpg" alt="Kibe, R$ 38,90, 500g" loading="lazy">
-        <img src="assets/moela.jpg" alt="Moela, R$ 39,90, 500g" loading="lazy">
-        <img src="assets/polenta.jpg" alt="Polenta, R$ 38,90, 500g" loading="lazy">
-        <img src="assets/carne_de_onca.jpg" alt="Carne de onça na broa úmida, individual, R$ 24,00" loading="lazy">
-      </div>
-    </div>
+h1, h2, h3, .display {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.12;
+}
 
-    <div class="menu-block">
-      <h3>Lanches</h3>
-      <div class="dish-grid">
-        <img src="assets/misto_frio.jpg" alt="Misto frio, R$ 12,00" loading="lazy">
-        <img src="assets/misto_quente.jpg" alt="Misto quente, R$ 13,00" loading="lazy">
-        <img src="assets/pao_com_ovo.jpg" alt="Pão com ovo, R$ 13,00" loading="lazy">
-        <img src="assets/pao_com_bife.jpg" alt="Pão com bife, R$ 21,00" loading="lazy">
-        <img src="assets/pao_com_bolinho.jpg" alt="Pão com bolinho, R$ 21,00" loading="lazy">
-        <img src="assets/buraco_quente.jpg" alt="Buraco quente, R$ 15,00" loading="lazy">
-        <img src="assets/x_burguer.jpg" alt="X-Burguer, R$ 18,00" loading="lazy">
-        <img src="assets/x_bacon.jpg" alt="X-Bacon, R$ 19,00" loading="lazy">
-        <img src="assets/x_calabresa.jpg" alt="X-Calabresa, R$ 19,00" loading="lazy">
-        <img src="assets/x_egg.jpg" alt="X-Egg, R$ 19,00" loading="lazy">
-        <img src="assets/x_frango.jpg" alt="X-Frango, R$ 19,00" loading="lazy">
-        <img src="assets/x_salada.jpg" alt="X-Salada, R$ 19,00" loading="lazy">
-        <img src="assets/x_tudo.jpg" alt="X-Tudo, R$ 21,00" loading="lazy">
-      </div>
-    </div>
+a { color: inherit; text-decoration: none; }
 
-    <div class="btn-row">
-      <a class="btn solid" href="https://wa.me/554137791420">Pedir pelo WhatsApp</a>
-      <a class="btn" href="o-bar.html">Conhecer o bar</a>
-    </div>
-  </div>
-</section>
+img { max-width: 100%; display: block; }
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-row">
-      <div>
-        <div class="wordmark">Bar do <span style="color:var(--copper)">Duda</span></div>
-        <p>Rua Octávio Schiavon, 293 — Capão da Imbuia, Curitiba/PR</p>
-      </div>
-      <div class="footer-links">
-        <a href="historia.html">Nossa história</a>
-        <a href="cardapio.html">Cardápio</a>
-        <a href="galeria.html">Galeria</a>
-        <a href="contato.html">Contato</a>
-        <a href="https://wa.me/554137791420">(41) 3779-1420</a>
-      </div>
-    </div>
-  </div>
-</footer>
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
 
-</body>
-</html>
+/* Header / nav */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(23, 18, 15, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.wordmark {
+  font-family: 'Fraunces', serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+}
+
+.wordmark span { color: var(--copper); }
+
+nav.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.primary-nav a {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+nav.primary-nav a:hover,
+nav.primary-nav a.active {
+  color: var(--ink);
+  border-color: var(--copper);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Page hero (interior pages) */
+.page-hero {
+  padding: 76px 0 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  color: var(--copper);
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  max-width: 720px;
+}
+
+.page-hero p {
+  color: var(--ink-muted);
+  max-width: 540px;
+  margin-top: 16px;
+  font-size: 1.05rem;
+}
+
+section { padding: 64px 0; }
+section + section { border-top: 1px solid var(--line); }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.section-head h2 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.section-head p {
+  color: var(--ink-muted);
+  max-width: 380px;
+  margin: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border: 1px solid var(--copper);
+  color: var(--ink);
+  font-size: 0.92rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover { background: var(--copper); color: #17120f; }
+
+.btn.solid {
+  background: var(--copper);
+  color: #17120f;
+  border-color: var(--copper);
+}
+
+.btn.solid:hover { background: var(--copper-soft); border-color: var(--copper-soft); }
+
+.btn-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+
+/* Cards / grid used on homepage */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.tile {
+  background: var(--bg-soft);
+  padding: 34px 28px;
+  transition: background 0.2s;
+}
+
+.tile:hover { background: var(--bg-card); }
+
+.tile .num { color: var(--copper); font-size: 0.85rem; display: block; margin-bottom: 14px; }
+.tile h3 { font-size: 1.25rem; margin-bottom: 10px; }
+.tile p { color: var(--ink-muted); font-size: 0.94rem; margin: 0 0 18px; }
+.tile .go { color: var(--copper-soft); font-size: 0.88rem; }
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.gallery-grid a {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-card);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-grid a:hover img { transform: scale(1.05); }
+
+/* Menu tables */
+.menu-block { margin-bottom: 44px; }
+.menu-block h3 {
+  font-size: 1.3rem;
+  color: var(--copper-soft);
+  margin-bottom: 6px;
+}
+.menu-block .menu-note {
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+}
+
+.menu-list { list-style: none; margin: 0; padding: 0; }
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.98rem;
+}
+
+.menu-list li span:first-child { color: var(--ink); }
+.menu-list li span:last-child { color: var(--copper-soft); white-space: nowrap; font-family: 'Fraunces', serif; }
+
+.plate-feature {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 30px;
+  margin-bottom: 44px;
+}
+
+.plate-feature h3 { color: var(--copper-soft); font-size: 1.3rem; margin-bottom: 10px; }
+.plate-feature p { color: var(--ink-muted); margin: 0; }
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.dish-grid img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 700px) {
+  .dish-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.timeline { border-left: 1px solid var(--line); margin-left: 6px; }
+
+.timeline-item {
+  position: relative;
+  padding: 4px 0 40px 34px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  background: var(--copper);
+  border-radius: 50%;
+}
+
+.timeline-item .year {
+  font-family: 'Fraunces', serif;
+  color: var(--copper-soft);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.timeline-item p { color: var(--ink-muted); margin: 0; max-width: 560px; }
+
+.story-quote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--ink);
+  max-width: 620px;
+  border-left: 2px solid var(--copper);
+  padding-left: 24px;
+  margin: 48px 0;
+}
+
+.story-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 44px 0;
+}
+
+.story-photos figure { margin: 0; }
+.story-photos img { width: 100%; border: 1px solid var(--line); }
+.story-photos figcaption {
+  color: var(--ink-muted);
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  .story-photos { grid-template-columns: 1fr; }
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.info-card {
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+
+.info-card svg { width: 26px; height: 26px; color: var(--copper); margin-bottom: 16px; }
+.info-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.info-card p { color: var(--ink-muted); margin: 0; font-size: 0.94rem; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-item { margin-bottom: 30px; }
+.contact-item h3 { font-size: 1rem; color: var(--copper-soft); margin-bottom: 8px; }
+.contact-item p { color: var(--ink-muted); margin: 0 0 12px; }
+
+.map-frame {
+  border: 1px solid var(--line);
+  aspect-ratio: 4/3;
+  background: var(--bg-card) url('https://www.bardodudacuritiba.com.br/assets/foto_02.jpeg') center/cover;
+}
+
+/* Home hero */
+.home-hero {
+  position: relative;
+  min-height: 74vh;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(23,18,15,0.35) 0%, rgba(23,18,15,0.95) 92%), url('assets/capa-duda.jpg') center/cover;
+  background-position: center 25%;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-hero .wrap { padding-bottom: 60px; width: 100%; }
+.home-hero .eyebrow { color: var(--copper-soft); }
+.home-hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); max-width: 760px; }
+.home-hero p.lede { color: var(--ink-muted); max-width: 480px; margin-top: 18px; font-size: 1.1rem; }
+
+/* Footer */
+footer.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 48px 0 32px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-row .wordmark { font-size: 1.1rem; }
+.footer-row p { color: var(--ink-muted); font-size: 0.88rem; margin: 6px 0 0; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-links a { color: var(--ink-muted); font-size: 0.88rem; }
+.footer-links a:hover { color: var(--copper-soft); }
+
+@media (max-width: 860px) {
+  .tile-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .info-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .dish-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 700px) {
+  nav.primary-nav { position: fixed; inset: 66px 0 0 0; background: var(--bg); padding: 20px 28px; display: none; }
+  nav.primary-nav.open { display: block; }
+  nav.primary-nav ul { flex-direction: column; gap: 4px; }
+  nav.primary-nav a { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .nav-toggle { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
